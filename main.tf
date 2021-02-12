@@ -12,26 +12,28 @@ terraform {
     }
   }
 }
- variable "CLIENT_ID" {
-  }
-  variable "CLIENT_SECRET" {
-  }
-  variable "SUBSCRIPTION_ID" {
-  }
-  variable "TENANT_ID" {
-  }
-  provider "azurerm" {
+variable "CLIENT_ID" {
+}
+variable "CLIENT_SECRET" {
+}
+variable "SUBSCRIPTION_ID" {
+}
+variable "TENANT_ID" {
+}
+
+provider "azurerm" {
   client_id       = var.CLIENT_ID
   client_secret   = var.CLIENT_SECRET
   subscription_id = var.SUBSCRIPTION_ID
   tenant_id       = var.TENANT_ID
   features {}
- }
- module "azure_app_service_container" {
+}
+
+module "azure_app_service_container" {
   source                = "git::https://github.com/chrisgallivan/azure_app_service_container.git"
-  resource_group_name   = "hugo-resources456"
-  app_service_plan_name = "kata-friday-github-actions456"
-  app_service_name      = "kata-friday-github-actions456"
+  resource_group_name   = "kata-friday-resources123"
+  app_service_plan_name = "kata-friday-test123"
+  app_service_name      = "kata-friday-test123"
   location              = "eastus"
   image_name            = "chrisgallivan/hugo-cicd:latest"
 }
