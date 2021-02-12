@@ -1,5 +1,0 @@
-baseurl = "http://example.com"
-disablePathToLower = false
-languageCode = "en-us"
-title = "Kata Fridays - Rob is the Azure god!"
-theme = "ananke"
