@@ -27,3 +27,11 @@ terraform {
   tenant_id       = var.TENANT_ID
   features {}
  }
+ module "azure_app_service_container" {
+  source                = "git::https://github.com/chrisgallivan/azure_app_service_container.git"
+  resource_group_name   = "kata-friday-resources"
+  app_service_plan_name = "kata-friday-github-actions"
+  app_service_name      = "kata-friday-github-actions"
+  location              = "eastus"
+  image_name            = "chrisgallivan/hugo-cicd:latest"
+}
