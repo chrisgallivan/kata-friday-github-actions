@@ -29,9 +29,9 @@ terraform {
  }
  module "azure_app_service_container" {
   source                = "git::https://github.com/chrisgallivan/azure_app_service_container.git"
-  resource_group_name   = "hugo-resources123"
-  app_service_plan_name = "kata-friday-github-actions123"
-  app_service_name      = "kata-friday-github-actions123"
+  resource_group_name   = "hugo-resources456"
+  app_service_plan_name = "kata-friday-github-actions456"
+  app_service_name      = "kata-friday-github-actions456"
   location              = "eastus"
   image_name            = "chrisgallivan/hugo-cicd:latest"
 }
