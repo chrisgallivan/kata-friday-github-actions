@@ -11,7 +11,8 @@ terraform {
       name = "kata-friday-github-actions"
     }
   }
-  variable "CLIENT_ID" {
+}
+ variable "CLIENT_ID" {
   }
   variable "CLIENT_SECRET" {
   }
@@ -26,4 +27,3 @@ terraform {
   tenant_id       = var.TENANT_ID
   features {}
  }
-}
